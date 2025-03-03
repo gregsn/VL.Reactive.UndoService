@@ -120,8 +120,8 @@ public class UndoServices<T> where T : class
     //    }
     //}
 
-    public Stack<IUndoable<T>> Undos;
-    public Stack<IUndoable<T>> Redos;
+    public Stack<IUndoable<T>> Undos = new();
+    public Stack<IUndoable<T>> Redos = new();
     public IUndoable<T>? Current = null;
 
 
