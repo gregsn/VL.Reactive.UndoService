@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="EjkTDberJ80NluIDbDMpT4" LanguageVersion="2025.7.0-0191-gc6973ccf34" Version="0.128">
-  <NugetDependency Id="FAuakuxubhDM0BrKWyYokA" Location="VL.CoreLib" Version="2025.7.0-0191-gc6973ccf34" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="EjkTDberJ80NluIDbDMpT4" LanguageVersion="2025.7.0-0184-g157d61ad29" Version="0.128">
+  <NugetDependency Id="FAuakuxubhDM0BrKWyYokA" Location="VL.CoreLib" Version="2025.7.0-0184-g157d61ad29" />
   <Patch Id="Ao47vt2ZfrsLVSNeJvN8OG">
     <Canvas Id="M3762mrMbsjMlEkE9jM171" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -976,12 +976,7 @@
                     <Choice Kind="TypeFlag" Name="Channel" />
                     <p:TypeArguments>
                       <TypeReference>
-                        <Choice Kind="TypeFlag" Name="IUndoable" />
-                        <p:TypeArguments>
-                          <TypeReference>
-                            <Choice Kind="TypeFlag" Name="T" />
-                          </TypeReference>
-                        </p:TypeArguments>
+                        <Choice Kind="TypeFlag" Name="T" />
                       </TypeReference>
                     </p:TypeArguments>
                   </p:TypeAnnotation>
@@ -1021,12 +1016,7 @@
                   <Choice Kind="TypeFlag" Name="Stack" />
                   <p:TypeArguments>
                     <TypeReference>
-                      <Choice Kind="TypeFlag" Name="IUndoable" />
-                      <p:TypeArguments>
-                        <TypeReference>
-                          <Choice Kind="TypeFlag" Name="T" />
-                        </TypeReference>
-                      </p:TypeArguments>
+                      <Choice Kind="TypeFlag" Name="T" />
                     </TypeReference>
                   </p:TypeArguments>
                 </p:TypeAnnotation>
@@ -1036,24 +1026,14 @@
                   <Choice Kind="TypeFlag" Name="Stack" />
                   <p:TypeArguments>
                     <TypeReference>
-                      <Choice Kind="TypeFlag" Name="IUndoable" />
-                      <p:TypeArguments>
-                        <TypeReference>
-                          <Choice Kind="TypeFlag" Name="T" />
-                        </TypeReference>
-                      </p:TypeArguments>
+                      <Choice Kind="TypeFlag" Name="T" />
                     </TypeReference>
                   </p:TypeArguments>
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="H0cxWnNgmDJMe6mm3T8Yt2" Name="Current">
                 <p:TypeAnnotation p:Type="TypeReference">
-                  <Choice Kind="TypeFlag" Name="IUndoable" />
-                  <p:TypeArguments>
-                    <TypeReference>
-                      <Choice Kind="TypeFlag" Name="T" />
-                    </TypeReference>
-                  </p:TypeArguments>
+                  <Choice Kind="TypeFlag" Name="T" />
                 </p:TypeAnnotation>
               </Slot>
               <Link Id="SE2iEEVOWGeNqshhkijF2F" Ids="SVHEWJhvHNJPKx8SZloFqu,GIKkyPFhYY1NvUxZRTioak" IsHidden="true" />

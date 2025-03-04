@@ -5,10 +5,10 @@ using VL.Lib.Reactive;
 namespace Reactive.UndoService;
 
 [ProcessNode(HasStateOutput = true)]
-public class UndoServices<T> where T : class
+public class UndoServices<T> where T : class, IUndoable<T>
 {
-    private IChannel<IUndoable<T>> _input;
-    public IChannel<IUndoable<T>> Input
+    private IChannel<T> _input;
+    public IChannel<T> Input
     {
         private get => _input;
         set
@@ -31,7 +31,7 @@ public class UndoServices<T> where T : class
                             Undos.Push(Current);
                         }
 
-                        Current = e.Copy() as IUndoable<T>;
+                        Current = e.Copy();
 
                         Redos.Clear();
                     }
@@ -64,7 +64,7 @@ public class UndoServices<T> where T : class
                             Redos.Push(Current);
                         }
 
-                        Current = Undos.Pop().Copy() as IUndoable<T>;
+                        Current = Undos.Pop().Copy();
 
                         _input.SetValueAndAuthor(Current, ServiceName());
                     }
@@ -96,7 +96,7 @@ public class UndoServices<T> where T : class
                             Undos.Push(Current);
                         }
 
-                        Current = Redos.Pop().Copy() as IUndoable<T>;
+                        Current = Redos.Pop().Copy();
 
                         _input.SetValueAndAuthor(Current, ServiceName());
                     }
@@ -120,9 +120,9 @@ public class UndoServices<T> where T : class
     //    }
     //}
 
-    public Stack<IUndoable<T>> Undos = new();
-    public Stack<IUndoable<T>> Redos = new();
-    public IUndoable<T>? Current = null;
+    public Stack<T> Undos = new();
+    public Stack<T> Redos = new();
+    public T? Current = null;
 
 
 
